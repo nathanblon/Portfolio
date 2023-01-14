@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Blontrock</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<title>Nathan Blontrock</title>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#Workplacelearning">Internships</a></li>
+            <li><a href="CVNathanBlontrock.pdf">C.V.</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section title="home" id="index.html">
+        <h1>Nathan </h1><h1> Blontrock</h1>
+        <figure>
+            <img src="profielfoto.png"   alt="Profile picture" width="285px" height="380px"/>
+        </figure>
+        <div class="herosubtitle">
+        <h2>Programming Graduate Student</h2>
+        </div>
+    </section>
+
+    <section title="about" id="about">
+        <h2>About me</h2>
+        <div class="landingpage-container">
+            <div class="horizontaltext-container">
+                <p>
+                Hello, I am <strong>Nathan Blontrock</strong>, 31 years old and I am currently a student at <a href="http://www.thomasmore.be">Thomas More
+                Hogeschool.</a>
+                </p>
+                <p>
+                I have a long history as an audio engineer but after 7 fruitful years and hard work I had seen enough. The tight budgets, insane hours and subjectiveness of the work weren't going to keep me sane anymore. Although audio will forever have a place in my heart I was ready to explore new horizons.
+                </p>
+                <p>
+                After doing some research I decided to go back to school and immediately settled on the Internet of Things or Programming graduates. These courses kindled my technical side while being more of an exact science; it either works or it doesn't.
+                <p>
+                I have an appartment in Antwerp where I'm doing a total renovation. I'm doing most of the work myself and am "almost" done now... </p>
+                <p>I play drums, badminton and love going to concerts, movies, fine restaurants,...</p>
+                </p>
+            </div>
+                <div class="containerfig">
+                    <img src="nathanWerk.jpg" alt="Nathan in studio">
+                </div>
+        </div>
+    </section>
+
+    <section title="projecten" id="project">
+            <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-box">
+                <a href="projects/project_portfoliowebsite.html">
+                    <div class="project-img">
+                        <img alt="project" src="Websitescreens.jpg">
+                    </div>
+                    <div class="project-text">
+                        <span>November 2022</span>
+                        <h3 class="project-title">Creating a Portfolio Website</h3>
+                        <p id="Portfoliowebsite"></p>
+                        <p><strong>Read More</strong></p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <a href="projects/project_onzenatuur.html">
+                    <div class="project-img">
+                        <img alt="project" src="Onze_natuur_poster.jpg">
+                    </div>
+                    <div class="project-text">
+                        <span>May 2022</span>
+                        <h3 class="project-title">Soundtrack of "Onze Natuur"</h3>
+                        <p id="onzenatuur">For MotorMusic studios I recorded, mixed and mastered the soundtrack of "Onze Natuur". I was pleasantly surprised to see it on Ultratop's number 1 place in the "classical" genre.
+                        </p>
+                        <p><strong>Read More</strong></p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-box">
+                <a href="projects/project_plugin_idea.html">
+                    <div class="project-img">
+                        <img alt="project" src="plugin_idea.png">
+                    </div>
+                    <div class="project-text">
+                        <span>Soon, in 2023</span>
+                        <h3 class="project-title">Creating an audio plugin</h3>
+                        <p>I am exploring an idea to create an audio plugin -a multiband dynamic parametric EQ- whith specific parameters which can be set to a dynamic value. This is something I missed during my time as audio engineer and couldn't find with existing plugin manufacturers. To be continued...</p>
+                        <p><strong>Read More</strong></p>
+                    </div>
+                </a>
+        </div>
+    </section>
+
+    <section title="Workplace Learning" id="Workplacelearning">
+        <h2>Workplace Learning</h2>
+    </section>
+
+    <section title="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form class="cf">
+          <div class="half left cf">
+            <input type="text" id="input-name" placeholder="Name">
+            <input type="email" id="input-email" placeholder="Email address">
+            <input type="text" id="input-subject" placeholder="Subject">
+          </div>
+          <div class="half right cf">
+            <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+          </div>  
+          <input type="submit" value="Submit" id="input-submit">
+        </form>
+    </section>
+    <footer>© 2022 Nathan Blontrock, All rights reserved. <a href="https://nl.linkedin.com/in/rick-astley-978941125"><img class="logo" src="LI-In-Bug.png" alt="Linked In Link"></a></footer>
+    <script>
+        $( "#Portfoliowebsite" ).load( "/projects/project_portfoliowebsite.html p:nth-child(2)");
+    </script>        
+</body>
+</html>
