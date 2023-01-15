@@ -55,7 +55,7 @@ ul {
     list-style: none;
     position: fixed;
     width: 100%;
-    z-index: 3;
+
     height: 62px;
     border-radius: 15px;
     top:0
@@ -83,14 +83,13 @@ section {
   align-items: left;
   flex-direction: column;
   display: flex;
-
 }
 
 h1 {
     margin: 50px 65px;
     text-align: left;
     color: #1F2326;
-    font-size: 180px;
+    font-size: 16vw;
     line-height: 1;
     font-weight: bold;
     animation-name: nathan;
@@ -109,32 +108,28 @@ h1 {
     100% {}
 }
 
-h1 > p {
-  margin: 0;
-}
 
 figure {
     border: 8px solid  #F2D16D;
     border-radius: 20px;
-    border-width: 15px 15px 15px 1200px ;
-    float: right;
+    border-width: 15px 15px 15px calc(100vw - 80%);
+    width: 80%;
     margin: 0px 65px 0px 65px;
     outline: 0;
-    font-size: 0;
+    z-index: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: #F2D16D;
     animation-name: foto;
     animation-duration:1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 0;
-    position: relative;
-    bottom: 460px;
-    background-color: #F2D16D;
 }
 @keyframes foto {
   0%   {margin: 0px 2000px 0px 65px}
   50%  {}
   75% {}     
-  100% {margin: 0px 65px 0px 65px}
+  100% {margin: 0px 65px 0px -15px}
 }
 
 figcaption {
@@ -148,6 +143,7 @@ h2 {
     line-height: 30px;
     color: #1F2326;
     font-weight:bold;
+    z-index: 1;
 }
 
 
@@ -372,7 +368,7 @@ footer {
 .containerfig img {
   margin: 16px 0px;
   display: block;
-  height: 430px;
+  height: 43vw;
   width: auto;
   border-radius: 8px;
   float: right;
