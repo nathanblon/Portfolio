@@ -32,6 +32,21 @@ animation-timing-function:ease-in-out;
 100% {}
 }
 
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #1F2326;
+  color: #F2D16D;
+  margin: 0 -10px 0 65px;
+  padding: 0px 0px 0px 32px;
+    border-width: 0px;
+    border-radius: 10px;
+    top:0;
+    position: fixed;
+    
+}
 
 
 li a {
@@ -62,6 +77,8 @@ ul {
     top:0
 }
 
+
+
 li a:hover:not(.active) {
     background-color:#F2F2F2;
 }
@@ -70,7 +87,7 @@ li:first-child a {
   margin: 12px 10px 12px 0px;
 }
 
-li:last-child {
+li:nth-last-child(2) {
   padding-right: 100px;
   float: right;
 }
@@ -113,7 +130,7 @@ h1 {
     100% {}
 }
 
-nav + section
+
 
 figure {
     border: 8px solid  #F2D16D;
@@ -144,8 +161,8 @@ figcaption {
 h2 {
     margin: 100px 65px 0px 65px;
     text-align: left;
-    font-size: 45px;
-    line-height: 30px;
+    font-size: 8vw;
+
     color: #1F2326;
     font-weight:bold;
     z-index: 1;
@@ -388,4 +405,30 @@ footer {
     .containerfig {
         order: -1;
     }
+
+  .hamburger {
+    display: block;
+    position:absolute;
+    z-index: 5;
+}
+  ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+      display: none;
+      height: auto;
+      top: 32px;
+
+  }
+  li:first-child a {
+    margin: 0;
+  }
+  li a{
+
+      margin: 0;
+      width: 100%;
+  }
+  ul.show-links {
+    display: block;
+  }
 }
