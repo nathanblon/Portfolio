@@ -9,6 +9,7 @@ html {
 
 body {
   background-attachment: fixed;
+
   background-color:#F2F2F2;
   margin: 0px;
   padding: 0px;
@@ -16,6 +17,10 @@ body {
 
 nav
 {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  position: relative;
 animation-name: navbar;
 animation-delay: 0s;
 animation-duration:1s;
@@ -28,16 +33,22 @@ animation-timing-function:ease-in-out;
 100% {}
 }
 
-section {  
-  display: flex;
-  justify-content:space-between;
-  align-items: left;
-  flex-direction: row;
-  display: block;
-  padding-top: 50px;
-  height: 750px;
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
   width: 100%;
+  background-color: #1F2326;
+  color: #F2D16D;
+  margin: 0 -10px 0 65px;
+  padding: 0px 0px 0px 32px;
+    border-width: 0px;
+    border-radius: 10px;
+    top:0;
+    position: fixed;
+    
 }
+
 
 li a {
     margin: 12px;
@@ -56,17 +67,18 @@ li a {
 
 ul {
     background-color: #1F2326;
-    margin: 0px 32px;
-    padding: 0px 0px 0px 32px;
+    margin: 0px 65px;
+    padding: 0px 0px 0px 8px;
     overflow: hidden;
     list-style: none;
     position: fixed;
     width: 100%;
-    z-index: 3;
     height: 62px;
     border-radius: 15px;
     top:0
 }
+
+
 
 li a:hover:not(.active) {
     background-color:#F2F2F2;
@@ -76,7 +88,7 @@ li:first-child a {
   margin: 12px 10px 12px 0px;
 }
 
-li:last-child {
+li:nth-last-child(2) {
   padding-right: 100px;
   float: right;
 }
@@ -85,11 +97,22 @@ li:last-child {
     background-color: #F2F2F2;
 }
 
+section {  
+  justify-content:space-between;
+  align-items: left;
+  flex-direction: column;
+  display: flex;
+}
+
+section:not(:first-child) {
+  margin-top: 80px;
+}
+
 h1 {
-    margin: 50px 65px;
+    margin: 25px 65px;
     text-align: left;
     color: #1F2326;
-    font-size: 180px;
+    font-size: 14vw;
     line-height: 1;
     font-weight: bold;
     animation-name: nathan;
@@ -108,32 +131,28 @@ h1 {
     100% {}
 }
 
-h1 > p {
-  margin: 0;
-}
+
 
 figure {
     border: 8px solid  #F2D16D;
     border-radius: 20px;
-    border-width: 15px 15px 15px 1200px ;
-    float: right;
-    margin: 0px 65px 0px 65px;
+    border-width: 15px 8px 15px calc(100vw - 65px);
+    width: 98%;
     outline: 0;
-    font-size: 0;
+    z-index: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: #F2D16D;
     animation-name: foto;
     animation-duration:1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    z-index: 0;
-    position: relative;
-    bottom: 460px;
-    background-color: #F2D16D;
 }
 @keyframes foto {
   0%   {margin: 0px 2000px 0px 65px}
   50%  {}
   75% {}     
-  100% {margin: 0px 65px 0px 65px}
+  100% {margin: 100px 65px 0px -15px}
 }
 
 figcaption {
@@ -143,18 +162,14 @@ figcaption {
 h2 {
     margin: 100px 65px 0px 65px;
     text-align: left;
-    font-size: 45px;
-    line-height: 30px;
+    font-size: 8vw;
+
     color: #1F2326;
     font-weight:bold;
+    z-index: 1;
 }
 
-.herosubtitle {
-  bottom: 350px;
-  margin: -75px 0px 0px 0px;
-  position: relative; 
-  z-index: 2;
-}
+
 
 h3 {
   margin: 1rem 0;
@@ -174,7 +189,6 @@ p {
 }
 
 #project {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -249,7 +263,7 @@ a {
   text-decoration: none;
 }
 .project-page {
-  margin: 100px 32px;
+  margin: 100px 64px;
   background-color:#F2D16Dab;
   border-radius: 8px;
   padding-bottom: 50px;
@@ -283,6 +297,7 @@ form #input-submit {
   color: #1F2326;
   background: #F2D16D;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 form textarea {
@@ -327,9 +342,7 @@ footer {
   float: right;
 }
 
-h2 + * {
-  margin-top: 20px;
-}
+
 
 .projectpage-text h1 {
   font-size: 75px;
@@ -379,12 +392,45 @@ h2 + * {
 .containerfig img {
   margin: 16px 0px;
   display: block;
-  height: 430px;
+  height: 43vw;
   width: auto;
   border-radius: 8px;
   float: right;
   }
 
+  @media only screen and (max-width: 600px) {
+    .landingpage-container {
+        flex-direction: column;
+        text-align: center!important;
+    }
 
+    .containerfig {
+        order: -1;
+    }
 
+  .hamburger {
+    display: block;
+    position:absolute;
+    z-index: 5;
+}
+  ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+      display: none;
+      height: auto;
+      top: 32px;
 
+  }
+  li:first-child a {
+    margin: 0;
+  }
+  li a{
+
+      margin: 0;
+      width: 100%;
+  }
+  ul.show-links {
+    display: block;
+  }
+}

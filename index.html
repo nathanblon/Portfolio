@@ -12,6 +12,7 @@
 
 <body>
     <nav>
+        <button class="hamburger">&#9776;</button>
         <ul>
             <li><a href="index.html"> Home</a></li>
             <li><a href="#about">About</a></li>
@@ -23,13 +24,12 @@
     </nav>
 
     <section title="home" id="index.html">
-        <h1>Nathan </h1><h1> Blontrock</h1>
-        <figure>
-            <img src="profielfoto.png"   alt="Profile picture" width="285px" height="380px"/>
-        </figure>
-        <div class="herosubtitle">
-        <h2>Programming Graduate Student</h2>
-        </div>
+       
+            <h1>Nathan </h1><h1> Blontrock <h2>Programming Graduate Student</h2></h1>
+            <figure>
+                <img src="profielfoto.png"   alt="Profile picture"  height="380vh" style="float: right"/>
+            </figure>
+      
     </section>
 
     <section title="about" id="about">
@@ -121,9 +121,18 @@
           <input type="submit" value="Submit" id="input-submit">
         </form>
     </section>
-    <footer>© 2022 Nathan Blontrock, All rights reserved. <a href="https://nl.linkedin.com/in/rick-astley-978941125"><img class="logo" src="LI-In-Bug.png" alt="Linked In Link"></a></footer>
+    <footer>© 2022 Nathan Blontrock, All rights reserved. <a href="https://nl.linkedin.com/in/rick-astley-978941125"><img class="logo" src="LI-In-Bug.png" alt="Linked In Link"></a>
+        <a href="https://github.com/nathanblon"><img class="logo" src="github-mark-white.png" alt="Github link"></a>
+    </footer>
     <script>
         $( "#Portfoliowebsite" ).load( "/projects/project_portfoliowebsite.html p:nth-child(2)");
+        var hamburger = document.querySelector('.hamburger');
+var navLinks = document.querySelector('ul');
+
+hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('show-links');
+});
+
     </script>        
 </body>
 </html>
