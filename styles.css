@@ -9,6 +9,7 @@ html {
 
 body {
   background-attachment: fixed;
+
   background-color:#F2F2F2;
   margin: 0px;
   padding: 0px;
@@ -67,7 +68,7 @@ li a {
 ul {
     background-color: #1F2326;
     margin: 0px 65px;
-    padding: 0px 0px 0px 32px;
+    padding: 0px 0px 0px 8px;
     overflow: hidden;
     list-style: none;
     position: fixed;
@@ -135,7 +136,7 @@ h1 {
 figure {
     border: 8px solid  #F2D16D;
     border-radius: 20px;
-    border-width: 15px 15px 15px calc(100vw - 65px);
+    border-width: 15px 8px 15px calc(100vw - 65px);
     width: 98%;
     outline: 0;
     z-index: 0;
@@ -262,7 +263,7 @@ a {
   text-decoration: none;
 }
 .project-page {
-  margin: 100px 32px;
+  margin: 100px 64px;
   background-color:#F2D16Dab;
   border-radius: 8px;
   padding-bottom: 50px;
@@ -296,6 +297,7 @@ form #input-submit {
   color: #1F2326;
   background: #F2D16D;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 form textarea {
